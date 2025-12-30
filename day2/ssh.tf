@@ -6,7 +6,7 @@ resource "tls_private_key" "example_ssh" {
 resource "local_file" "private_key" {
   content         = tls_private_key.example_ssh.private_key_pem
   filename        = "${path.module}/myserver_key.pem"
-  file_permission = "0600" # secure permission so only you can read it
+  file_permission = "0600" # read write permission for the owner
 }
 
 output "ssh_command" {
