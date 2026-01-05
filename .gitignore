@@ -13,4 +13,3 @@ override.tf.json
 .pem
 .key
 .tfvars
-.lock.hcl
